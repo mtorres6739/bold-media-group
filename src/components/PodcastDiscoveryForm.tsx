@@ -117,7 +117,7 @@ export default function PodcastDiscoveryForm() {
             Your podcast discovery questionnaire has been submitted successfully.
           </p>
           <p className="text-lg text-gray-400">
-            Our team will review your responses and create a customized podcast blueprint for your business. We'll be in touch within 24-48 hours to discuss your podcast strategy.
+            Our team will review your responses and create a customized podcast blueprint for your business. We&apos;ll be in touch within 24-48 hours to discuss your podcast strategy.
           </p>
         </div>
       </div>
@@ -175,7 +175,7 @@ export default function PodcastDiscoveryForm() {
           <div className="space-y-6">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold mb-2">{sections[0].icon} {sections[0].title}</h2>
-              <p className="text-gray-400">Let's understand the foundation of your podcast vision</p>
+              <p className="text-gray-400">Let&apos;s understand the foundation of your podcast vision</p>
             </div>
 
             <div>
@@ -392,7 +392,7 @@ export default function PodcastDiscoveryForm() {
           <div className="space-y-6">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold mb-2">{sections[2].icon} {sections[2].title}</h2>
-              <p className="text-gray-400">Let's plan your content and production needs</p>
+              <p className="text-gray-400">Let&apos;s plan your content and production needs</p>
             </div>
 
             <div>
