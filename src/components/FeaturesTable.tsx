@@ -34,6 +34,16 @@ export default function FeaturesTable() {
       ]
     },
     {
+      category: 'Advanced Marketing & Branding',
+      items: [
+        { name: 'Social accounts created (YouTube, LinkedIn, Facebook, Instagram, TikTok)', starter: false, growth: false, premier: true },
+        { name: 'Custom website for show with audio/video loaded', starter: false, growth: false, premier: true },
+        { name: 'Social clips scheduled & auto-posted to all platforms', starter: false, growth: false, premier: true },
+        { name: '18"x12" acrylic sign for show set', starter: false, growth: false, premier: true },
+        { name: 'Custom mic boxes with logo', starter: false, growth: false, premier: true }
+      ]
+    },
+    {
       category: 'Marketing Assets',
       items: [
         { name: 'Social Media Shorts', starter: '10', growth: '30', premier: '45' },
