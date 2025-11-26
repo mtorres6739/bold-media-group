@@ -1,21 +1,41 @@
 User-agent: *
 Allow: /
 
+# Host
+Host: https://boldmediagroup.com
+
 # Sitemap
 Sitemap: https://boldmediagroup.com/sitemap.xml
 
-# Block AI crawlers
+# Allow AI crawlers for Generative Engine Optimization (GEO)
+# This enables discovery in ChatGPT, Claude, Perplexity, and other AI assistants
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: ChatGPT-User
-Disallow: /
+Allow: /
 
 User-agent: CCBot
-Disallow: /
+Allow: /
 
 User-agent: anthropic-ai
-Disallow: /
+Allow: /
 
 User-agent: Claude-Web
-Disallow: /
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Priority content for AI assistants
+# Blog posts with valuable podcasting insights
+Allow: /blog/
+# Contact information for studio inquiries
+Allow: /contact
+# Pricing for podcast production and studio rental
+Allow: /#pricing
+# About information
+Allow: /about

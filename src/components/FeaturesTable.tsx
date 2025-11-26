@@ -13,24 +13,31 @@ export default function FeaturesTable() {
     {
       category: 'Core Production',
       items: [
-        { name: 'Up to 50 minutes raw audio/video', starter: true, growth: true, premier: true },
-        { name: 'Noise Reduction & Audio Enhancement', starter: true, growth: true, premier: true },
-        { name: 'Removal of Filler Words (ums, ahs)', starter: true, growth: true, premier: true },
-        { name: 'Professional Audio Mastering (EQ & Loudness)', starter: true, growth: true, premier: true },
-        { name: 'Basic Video Editing', starter: true, growth: true, premier: true },
+        { name: 'Episodes Per Month', starter: '1', growth: '1', premier: '1' },
+        { name: 'Professional Studio Recording', starter: true, growth: true, premier: true },
+        { name: 'Raw Audio Delivered', starter: true, growth: false, premier: false },
+        { name: 'Raw Video Delivered', starter: true, growth: false, premier: false },
+        { name: 'Edited Video Production', starter: false, growth: true, premier: true },
+        { name: 'Enhanced Audio Mastering', starter: false, growth: true, premier: true },
+        { name: 'Noise Reduction & Audio Enhancement', starter: false, growth: true, premier: true },
+        { name: 'Removal of Filler Words (ums, ahs)', starter: false, growth: true, premier: true },
         { name: 'Advanced Video Editing & Color Grading', starter: false, growth: true, premier: true },
-        { name: 'Custom Intro & Outro', starter: false, growth: false, premier: true }
+        { name: 'Custom Intro & Outro', starter: false, growth: true, premier: true },
+        { name: 'Custom Video Intro & Outro', starter: false, growth: false, premier: true },
+        { name: 'Company Logo in Bottom Corner', starter: false, growth: false, premier: true },
+        { name: 'Names in Lower Thirds on Screen', starter: false, growth: false, premier: true },
+        { name: 'Custom Sign Logo in Studio Background', starter: false, growth: false, premier: true },
+        { name: 'Custom Cover Art for Show & Episode', starter: false, growth: false, premier: true }
       ]
     },
     {
       category: 'Content & Distribution',
       items: [
-        { name: 'Episodes Included Per Month', starter: '1', growth: '2', premier: '3' },
+        { name: 'Distribution to Major Platforms', starter: false, growth: true, premier: true },
         { name: 'Transcript generation', starter: false, growth: true, premier: true },
         { name: 'SEO-Optimized Show Notes', starter: false, growth: true, premier: true },
         { name: 'Blog post per episode', starter: false, growth: false, premier: true },
-        { name: 'Distribution to Major Platforms', starter: true, growth: true, premier: true },
-        { name: 'ID3 Tagging & Metadata', starter: true, growth: true, premier: true }
+        { name: 'ID3 Tagging & Metadata', starter: false, growth: true, premier: true }
       ]
     },
     {
@@ -46,8 +53,8 @@ export default function FeaturesTable() {
     {
       category: 'Marketing Assets',
       items: [
-        { name: 'Social Media Shorts', starter: '10', growth: '30', premier: '45' },
-        { name: 'Social Media Clips', starter: '10', growth: '30', premier: '45' },
+        { name: 'Social Media Shorts', starter: false, growth: '5', premier: '15' },
+        { name: 'Social Media Clips', starter: false, growth: '5', premier: '15' },
         { name: 'Logo Integration in Video', starter: false, growth: true, premier: true },
         { name: 'Custom Thumbnails (YouTube & Spotify)', starter: false, growth: false, premier: true },
         { name: 'Standard Podcast Website', starter: false, growth: true, premier: false },
@@ -59,150 +66,190 @@ export default function FeaturesTable() {
       category: 'Support & Workflow',
       items: [
         { name: 'Dedicated producer', starter: true, growth: true, premier: true },
-        { name: 'Turnaround Time', starter: '7-Day', growth: '5-Day', premier: '3-Day' },
+        { name: 'Basic File Organization', starter: true, growth: true, premier: true },
+        { name: 'Support', starter: false, growth: true, premier: false },
+        { name: 'Priority Support', starter: false, growth: false, premier: true },
         { name: 'Quarterly Strategy & Design Consult', starter: false, growth: false, premier: true },
+        { name: 'White-Glove Service', starter: false, growth: false, premier: true },
         { name: 'Secure Cloud File Storage', starter: true, growth: true, premier: true }
       ]
     }
   ];
 
   const CheckIcon = () => (
-    <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-      <path
-        fillRule="evenodd"
-        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-        clipRule="evenodd"
-      />
-    </svg>
+    <div className="w-6 h-6 rounded-full bg-[#d4af37]/20 flex items-center justify-center">
+      <svg className="w-3.5 h-3.5 text-[#d4af37]" fill="currentColor" viewBox="0 0 20 20">
+        <path
+          fillRule="evenodd"
+          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+          clipRule="evenodd"
+        />
+      </svg>
+    </div>
   );
 
   const CrossIcon = () => (
-    <svg className="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-      <path
-        fillRule="evenodd"
-        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-        clipRule="evenodd"
-      />
-    </svg>
+    <div className="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center">
+      <svg className="w-3 h-3 text-zinc-600" fill="currentColor" viewBox="0 0 20 20">
+        <path
+          fillRule="evenodd"
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clipRule="evenodd"
+        />
+      </svg>
+    </div>
   );
 
   return (
-    <section className="py-20 bg-white" id="features">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-32 bg-[#0a0a0a] overflow-hidden" id="features">
+      {/* Background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.04)_0%,_transparent_70%)]" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
-        <div className={`text-center mb-16 ${mounted ? 'animate-fadeInUp' : ''}`}>
-          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-4">
+        <div className={`text-center mb-16 ${mounted ? 'animate-fadeInUp' : 'opacity-0'}`}>
+          <span className="inline-block text-[#d4af37] text-sm font-medium tracking-widest uppercase mb-4">
+            Feature Comparison
+          </span>
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium text-white mb-6">
             Compare Our Packages
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A detailed look at what’s included in each plan.
+          <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+            A detailed look at what&apos;s included in each plan
           </p>
         </div>
 
-        {/* Table */}
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse table-fixed" suppressHydrationWarning>
-            {/* Header */}
-            <thead>
-              <tr className="border-b-2 border-gray-200">
-                <th className="text-left py-4 px-6 font-semibold text-black w-2/5">Features</th>
-                <th className="text-center py-4 px-6 font-semibold text-black w-1/5">
-                  <div className="flex flex-col items-center">
-                    <span className="text-lg">Starter Spark</span>
-                    <span className="text-sm text-gray-500 font-normal">Call for Pricing</span>
-                  </div>
-                </th>
-                <th className="text-center py-4 px-6 font-semibold text-black bg-yellow-50 w-1/5">
-                  <div className="flex flex-col items-center">
-                    <span className="text-lg">Growth Pro</span>
-                    <span className="text-sm text-gray-500 font-normal">Call for Pricing</span>
-                    <span className="text-xs bg-yellow-400 text-black px-2 py-1 rounded-full mt-1">Most Popular</span>
-                  </div>
-                </th>
-                <th className="text-center py-4 px-6 font-semibold text-black w-1/5">
-                  <div className="flex flex-col items-center">
-                    <span className="text-lg">Studio Premier</span>
-                    <span className="text-sm text-gray-500 font-normal">Call for Pricing</span>
-                  </div>
-                </th>
-              </tr>
-            </thead>
+        {/* Table Container */}
+        <div
+          className={`glass-card rounded-2xl overflow-hidden ${mounted ? 'animate-fadeInUp' : 'opacity-0'}`}
+          style={{ animationDelay: '0.2s' }}
+        >
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse table-fixed min-w-[800px]" suppressHydrationWarning>
+              {/* Header */}
+              <thead>
+                <tr className="border-b border-white/10">
+                  <th className="text-left py-6 px-6 font-medium text-zinc-400 text-sm uppercase tracking-wider w-2/5">
+                    Features
+                  </th>
+                  <th className="text-center py-6 px-4 w-1/5">
+                    <div className="flex flex-col items-center">
+                      <span className="text-white font-semibold">Starter Spark</span>
+                      <span className="text-xs text-zinc-500 mt-1">Call for Pricing</span>
+                    </div>
+                  </th>
+                  <th className="text-center py-6 px-4 bg-[#d4af37]/5 border-x border-[#d4af37]/10 w-1/5">
+                    <div className="flex flex-col items-center">
+                      <span className="text-white font-semibold">Growth Pro</span>
+                      <span className="text-xs text-zinc-500 mt-1">Call for Pricing</span>
+                      <span className="inline-flex items-center gap-1 text-[10px] bg-gradient-to-r from-[#d4af37] to-[#b8960c] text-black px-2.5 py-1 rounded-full mt-2 font-semibold">
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        Popular
+                      </span>
+                    </div>
+                  </th>
+                  <th className="text-center py-6 px-4 w-1/5">
+                    <div className="flex flex-col items-center">
+                      <span className="text-white font-semibold">Studio Premier</span>
+                      <span className="text-xs text-zinc-500 mt-1">Call for Pricing</span>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
 
-            {/* Body */}
-            <tbody>
-              {features.map((category) => (
-                <React.Fragment key={category.category}>
-                  {/* Category Header */}
-                  <tr className="bg-gray-50">
-                    <td colSpan={4} className="py-3 px-6 font-semibold text-black border-b">
-                      {category.category}
-                    </td>
-                  </tr>
-                  
-                  {/* Category Items */}
-                  {category.items.map((item) => (
-                    <tr key={item.name} className="border-b hover:bg-gray-50 transition-colors">
-                      <td className="py-4 px-6 text-gray-700 w-2/5">{item.name}</td>
-                      <td className="py-4 px-6 text-center w-1/5">
-                        {typeof item.starter === 'boolean' ? (
-                          <div className="flex items-center justify-center">
-                            {item.starter ? <CheckIcon /> : <CrossIcon />}
-                          </div>
-                        ) : (
-                          <span className="text-gray-700 font-medium">{item.starter}</span>
-                        )}
-                      </td>
-                      <td className="py-4 px-6 text-center bg-yellow-50">
-                        {typeof item.growth === 'boolean' ? (
-                          <div className="flex items-center justify-center">
-                            {item.growth ? <CheckIcon /> : <CrossIcon />}
-                          </div>
-                        ) : (
-                          <span className="text-gray-700 font-medium">{item.growth}</span>
-                        )}
-                      </td>
-                      <td className="py-4 px-6 text-center">
-                        {typeof item.premier === 'boolean' ? (
-                          <div className="flex items-center justify-center">
-                            {item.premier ? <CheckIcon /> : <CrossIcon />}
-                          </div>
-                        ) : (
-                          <span className="text-gray-700 font-medium">{item.premier}</span>
-                        )}
+              {/* Body */}
+              <tbody>
+                {features.map((category, categoryIndex) => (
+                  <React.Fragment key={category.category}>
+                    {/* Category Header */}
+                    <tr className="bg-white/[0.02]">
+                      <td colSpan={4} className="py-4 px-6 border-b border-white/5">
+                        <span className="text-[#d4af37] font-medium text-sm tracking-wide">
+                          {category.category}
+                        </span>
                       </td>
                     </tr>
-                  ))}
-                </React.Fragment>
-              ))}
-            </tbody>
 
-            {/* Footer */}
-            <tfoot>
-              <tr className="bg-gray-50">
-                <td className="py-4 px-6"></td>
-                <td className="py-4 px-6 text-center">
-                  <button className="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
-                    Get Started
-                  </button>
-                </td>
-                <td className="py-4 px-6 text-center bg-yellow-50">
-                  <button className="px-6 py-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-300 transition-colors">
-                    Choose Plan
-                  </button>
-                </td>
-                <td className="py-4 px-6 text-center">
-                  <button className="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
-                    Contact Sales
-                  </button>
-                </td>
-              </tr>
-            </tfoot>
-          </table>
+                    {/* Category Items */}
+                    {category.items.map((item, itemIndex) => (
+                      <tr
+                        key={item.name}
+                        className="border-b border-white/5 hover:bg-white/[0.02] transition-colors duration-300"
+                      >
+                        <td className="py-4 px-6 text-zinc-400 text-sm">{item.name}</td>
+                        <td className="py-4 px-4 text-center">
+                          {typeof item.starter === 'boolean' ? (
+                            <div className="flex items-center justify-center">
+                              {item.starter ? <CheckIcon /> : <CrossIcon />}
+                            </div>
+                          ) : (
+                            <span className="text-white font-medium text-sm">{item.starter}</span>
+                          )}
+                        </td>
+                        <td className="py-4 px-4 text-center bg-[#d4af37]/5 border-x border-[#d4af37]/10">
+                          {typeof item.growth === 'boolean' ? (
+                            <div className="flex items-center justify-center">
+                              {item.growth ? <CheckIcon /> : <CrossIcon />}
+                            </div>
+                          ) : (
+                            <span className="text-[#d4af37] font-medium text-sm">{item.growth}</span>
+                          )}
+                        </td>
+                        <td className="py-4 px-4 text-center">
+                          {typeof item.premier === 'boolean' ? (
+                            <div className="flex items-center justify-center">
+                              {item.premier ? <CheckIcon /> : <CrossIcon />}
+                            </div>
+                          ) : (
+                            <span className="text-white font-medium text-sm">{item.premier}</span>
+                          )}
+                        </td>
+                      </tr>
+                    ))}
+                  </React.Fragment>
+                ))}
+              </tbody>
+
+              {/* Footer */}
+              <tfoot>
+                <tr className="border-t border-white/10">
+                  <td className="py-6 px-6"></td>
+                  <td className="py-6 px-4 text-center">
+                    <button className="px-6 py-3 bg-white/5 text-white border border-white/10 rounded-lg text-sm font-medium hover:bg-white/10 hover:border-[#d4af37]/30 transition-all duration-300">
+                      Get Started
+                    </button>
+                  </td>
+                  <td className="py-6 px-4 text-center bg-[#d4af37]/5 border-x border-[#d4af37]/10">
+                    <button className="btn-premium px-6 py-3 text-sm">
+                      Choose Plan
+                    </button>
+                  </td>
+                  <td className="py-6 px-4 text-center">
+                    <button className="px-6 py-3 bg-white/5 text-white border border-white/10 rounded-lg text-sm font-medium hover:bg-white/10 hover:border-[#d4af37]/30 transition-all duration-300">
+                      Contact Sales
+                    </button>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
         </div>
 
-        {/* Mobile Responsive Note */}
-        <div className="mt-8 text-center text-gray-500 text-sm">
-          <p>Swipe horizontally on mobile to view all features</p>
+        {/* Mobile Note */}
+        <div
+          className={`mt-6 text-center ${mounted ? 'animate-fadeIn' : 'opacity-0'}`}
+          style={{ animationDelay: '0.4s' }}
+        >
+          <p className="text-zinc-600 text-xs flex items-center justify-center gap-2">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+            </svg>
+            Scroll horizontally on mobile to view all features
+          </p>
         </div>
       </div>
     </section>
