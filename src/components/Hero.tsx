@@ -6,10 +6,46 @@ import Link from 'next/link';
 export default function Hero() {
   const [email, setEmail] = useState('');
   const [mounted, setMounted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit');
+      }
+
+      setIsSubmitted(true);
+      setEmail('');
+
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 5000);
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
@@ -79,9 +115,9 @@ export default function Hero() {
             style={{ animationDelay: '0.5s' }}
             suppressHydrationWarning
           >
-            <button className="btn-premium px-8 py-4 text-base tracking-wide">
+            <a href="#pricing" className="btn-premium px-8 py-4 text-base tracking-wide">
               View Packages
-            </button>
+            </a>
             {mounted && (
               <Link
                 href="/podcast-discovery"
@@ -96,36 +132,42 @@ export default function Hero() {
           <div
             className={`max-w-lg mx-auto ${mounted ? 'animate-fadeInUp' : ''}`}
             style={{ animationDelay: '0.6s' }}
+            suppressHydrationWarning
           >
-            <p className="text-zinc-500 text-sm mb-4 tracking-wide uppercase">
-              Schedule a complimentary consultation
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                className="flex-1 px-5 py-4 bg-white/5 border border-white/10 rounded-lg text-white placeholder-zinc-500 focus:border-[#d4af37] focus:bg-white/8 transition-all duration-300 text-base"
-              />
-              <button className="px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-zinc-100 transition-all duration-300 whitespace-nowrap">
-                Get Started
-              </button>
+            <div className={`text-center py-4 ${isSubmitted ? 'block' : 'hidden'}`}>
+              <div className="inline-flex items-center gap-2 px-6 py-3 bg-green-500/10 border border-green-500/20 rounded-lg">
+                <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-green-400 font-medium">Thanks! We&apos;ll be in touch soon.</span>
+              </div>
+            </div>
+            <div className={isSubmitted ? 'hidden' : 'block'}>
+              <p className="text-zinc-500 text-sm mb-4 tracking-wide uppercase">
+                Schedule a complimentary consultation
+              </p>
+              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className="flex-1 px-5 py-4 bg-white/5 border border-white/10 rounded-lg text-white placeholder-zinc-500 focus:border-[#d4af37] focus:bg-white/8 transition-all duration-300 text-base"
+                />
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-zinc-100 transition-all duration-300 whitespace-nowrap disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? 'Sending...' : 'Get Started'}
+                </button>
+              </form>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div
-        className={`absolute bottom-12 left-1/2 -translate-x-1/2 ${mounted ? 'animate-fadeIn' : 'opacity-0'}`}
-        style={{ animationDelay: '1s' }}
-      >
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-xs text-zinc-500 uppercase tracking-widest">Scroll</span>
-          <div className="w-[1px] h-12 bg-gradient-to-b from-zinc-500 to-transparent" />
-        </div>
-      </div>
 
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent" />

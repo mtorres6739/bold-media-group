@@ -124,14 +124,14 @@ const contentStarters = {
   recordingLocation: [
     "Professional studio with high-end equipment and soundproofing",
     "Home office setup with quality microphone and acoustic treatment",
-    "Remote recording using professional platforms and backup systems",
+    "In-studio recording at our professional Mesa, AZ facility",
     "Hybrid approach with studio for interviews and home for solo content",
     "On-location recording at events or client sites"
   ],
   equipmentNeeds: [
     "Professional microphone, audio interface, and acoustic treatment",
     "Video recording setup with lighting and camera equipment",
-    "Portable recording kit for remote interviews and on-location content",
+    "Professional studio equipment including cameras, microphones, and mixers",
     "Basic starter package with upgrade path as audience grows",
     "Complete production suite with editing and streaming capabilities"
   ],

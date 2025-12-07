@@ -18,19 +18,19 @@ export default function FAQ() {
   const faqs: FAQItem[] = [
     {
       question: "How long does it take to produce one episode?",
-      answer: "Production time varies by package: Starter Spark has a 7-day turnaround, Growth Pro offers 5-day delivery, and Studio Premier provides expedited 3-day service. This includes recording, editing, and distribution."
+      answer: "We aim for a maximum turnaround of 7-10 business days, depending on current production volume. We'll keep you informed throughout the process."
     },
     {
       question: "What's included in the social media content?",
-      answer: "We create short-form video clips optimized for platforms like Instagram Reels, TikTok, and YouTube Shorts. Starter Spark includes 10 clips, Growth Pro provides 30, and Studio Premier offers 45 clips per episode, all with custom branding."
+      answer: "We create short-form video clips optimized for platforms like Instagram Reels, TikTok, and YouTube Shorts. The number of clips included varies by package - contact us for details on what's included in each tier."
     },
     {
       question: "Do you help with podcast strategy and content planning?",
       answer: "Yes! All packages include access to our dedicated producers who help with content strategy. Studio Premier includes quarterly strategy and design consultations for comprehensive podcast planning and brand development."
     },
     {
-      question: "Can I use my own recording equipment?",
-      answer: "Absolutely! While we offer a professional studio setup with a Dedicated Producer who helps set everything up and handles all the technical aspects, you can also record using your own equipment and we'll handle the post-production, editing, and distribution."
+      question: "Do I need to come to your studio?",
+      answer: "Yes, all recording sessions take place at our professional studio in Mesa, AZ. This ensures the highest quality audio and video production with our professional equipment and acoustic-treated environment."
     },
     {
       question: "How do you distribute podcasts to major platforms?",
@@ -131,12 +131,12 @@ export default function FAQ() {
                 Our team is here to help. Schedule a free consultation to discuss your podcast needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="btn-premium px-8 py-3.5">
+                <a href="/contact" className="btn-premium px-8 py-3.5">
                   Schedule a Call
-                </button>
-                <button className="btn-secondary px-8 py-3.5">
+                </a>
+                <a href="/contact" className="btn-secondary px-8 py-3.5">
                   Email Us
-                </button>
+                </a>
               </div>
             </div>
           </div>

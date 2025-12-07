@@ -531,10 +531,8 @@ export default function PodcastDiscoveryForm() {
                 </label>
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    { value: 'in-office', label: 'In-office', icon: '🏢' },
-                    { value: 'studio', label: 'Professional Studio', icon: '🎙️' },
-                    { value: 'remote', label: 'Remote/Zoom', icon: '💻' },
-                    { value: 'mixed', label: 'Mixed', icon: '🔄' }
+                    { value: 'studio', label: 'Our Mesa Studio', icon: '🎙️' },
+                    { value: 'in-office', label: 'My Office', icon: '🏢' },
                   ].map((option) => (
                     <button
                       key={option.value}

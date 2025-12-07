@@ -36,7 +36,7 @@ export default function FAQPage() {
     {
       category: "Pricing",
       question: "How much do your services cost?",
-      answer: "We offer three pricing tiers: Starter Spark at $299/month, Growth Pro at $599/month, and Studio Premier at $1499/month. Each tier includes different levels of service and deliverables."
+      answer: "We offer three pricing tiers: Starter Spark, Growth Pro, and Studio Premier. Each tier includes different levels of service and deliverables. Please contact us for current pricing."
     },
     {
       category: "Pricing",
@@ -46,22 +46,22 @@ export default function FAQPage() {
     {
       category: "Process",
       question: "How does the podcast production process work?",
-      answer: "Our process is simple: you record your content (either in our studio or remotely), and we handle everything else - editing, show notes, social media content, and distribution. You just focus on creating great content."
+      answer: "Our process is simple: you come to our studio to record your content, and we handle everything else - editing, show notes, social media content, and distribution. You just focus on creating great content."
     },
     {
       category: "Process",
       question: "How long does it take to produce one episode?",
-      answer: "Production time varies by package: Starter Spark has a 7-day turnaround, Growth Pro offers 5-day delivery, and Studio Premier provides expedited 3-day service."
+      answer: "We aim for a maximum turnaround of 7-10 business days, depending on current production volume. We'll keep you informed throughout the process."
     },
     {
       category: "Process",
       question: "Do I need to come to your studio?",
-      answer: "Not necessarily! While we have a professional studio available, we also work with remote recording setups and can produce high-quality podcasts regardless of your location."
+      answer: "Yes, all recording sessions take place at our professional studio in Mesa, AZ. This ensures the highest quality audio and video production with our professional equipment and acoustic-treated environment."
     },
     {
       category: "Technical",
       question: "What equipment do you use?",
-      answer: "We use professional-grade equipment including 4K cameras, studio-quality microphones, professional audio mixers, and acoustic-treated recording environments to ensure the highest quality production."
+      answer: "We use professional-grade equipment including DJI Osmo Pocket 3 cameras for 4K video, Shure MV7+ microphones for broadcast-quality audio, a TASCAM Mixcast 4 mixer, and an acoustic-treated recording environment to ensure the highest quality production."
     },
     {
       category: "Technical",
@@ -76,7 +76,7 @@ export default function FAQPage() {
     {
       category: "Content",
       question: "What kind of social media content do you create?",
-      answer: "We create short-form video clips optimized for platforms like Instagram Reels, TikTok, and YouTube Shorts. The number of clips varies by package: 10 for Starter Spark, 30 for Growth Pro, and 45 for Studio Premier."
+      answer: "We create short-form video clips optimized for platforms like Instagram Reels, TikTok, and YouTube Shorts. The number of clips included varies by package - contact us for details on what's included in each tier."
     },
     {
       category: "Content",

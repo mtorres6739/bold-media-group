@@ -157,12 +157,12 @@ export default function StudioShowcase() {
                 </p>
 
                 {/* CTA */}
-                <button className="mt-8 inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-[#d4af37] border border-[#d4af37]/30 rounded-lg hover:bg-[#d4af37]/10 hover:border-[#d4af37]/50 transition-all duration-300">
+                <a href="/contact" className="mt-8 inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-[#d4af37] border border-[#d4af37]/30 rounded-lg hover:bg-[#d4af37]/10 hover:border-[#d4af37]/50 transition-all duration-300">
                   Schedule a Studio Tour
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
 
@@ -172,68 +172,6 @@ export default function StudioShowcase() {
           </div>
         </div>
 
-        {/* Features Lists */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          {/* Why Choose Our Studio */}
-          <div
-            className={`glass-card rounded-2xl p-8 lg:p-10 ${mounted ? 'animate-fadeInUp' : 'opacity-0'}`}
-            style={{ animationDelay: '0.7s' }}
-          >
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-10 h-10 rounded-lg bg-[#d4af37]/10 border border-[#d4af37]/20 flex items-center justify-center">
-                <svg className="w-5 h-5 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="font-display text-xl text-white">Why Choose Our Studio?</h3>
-            </div>
-
-            <ul className="space-y-4">
-              {studioFeatures.map((feature, index) => (
-                <li key={index} className="flex items-start gap-3 group">
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#d4af37]/10 flex items-center justify-center mt-0.5 group-hover:bg-[#d4af37]/20 transition-colors duration-300">
-                    <svg className="w-3 h-3 text-[#d4af37]" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-zinc-400 text-sm group-hover:text-zinc-300 transition-colors duration-300">
-                    {feature}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Studio Amenities */}
-          <div
-            className={`glass-card rounded-2xl p-8 lg:p-10 ${mounted ? 'animate-fadeInUp' : 'opacity-0'}`}
-            style={{ animationDelay: '0.8s' }}
-          >
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-10 h-10 rounded-lg bg-[#d4af37]/10 border border-[#d4af37]/20 flex items-center justify-center">
-                <svg className="w-5 h-5 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                </svg>
-              </div>
-              <h3 className="font-display text-xl text-white">Studio Amenities</h3>
-            </div>
-
-            <ul className="space-y-4">
-              {studioAmenities.map((amenity, index) => (
-                <li key={index} className="flex items-start gap-3 group">
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#d4af37]/10 flex items-center justify-center mt-0.5 group-hover:bg-[#d4af37]/20 transition-colors duration-300">
-                    <svg className="w-3 h-3 text-[#d4af37]" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-zinc-400 text-sm group-hover:text-zinc-300 transition-colors duration-300">
-                    {amenity}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
   );

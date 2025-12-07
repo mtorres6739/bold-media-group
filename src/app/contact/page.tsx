@@ -101,20 +101,6 @@ export default function ContactPage() {
             </p>
           </div>
 
-          {/* Stats bar */}
-          <div className="flex flex-wrap justify-center gap-8 lg:gap-16 mb-20 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
-            {[
-              { value: '500+', label: 'Episodes Produced' },
-              { value: '24hr', label: 'Response Time' },
-              { value: '98%', label: 'Client Satisfaction' },
-              { value: '50+', label: 'Active Clients' }
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-yellow-400">{stat.value}</div>
-                <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -253,10 +239,10 @@ export default function ContactPage() {
                           className="w-full px-4 py-4 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-yellow-400/50 focus:bg-white/10 focus:shadow-[0_0_30px_rgba(250,204,21,0.1)] transition-all duration-300 appearance-none cursor-pointer"
                         >
                           <option value="" className="bg-gray-900">Select a service</option>
-                          <option value="starter" className="bg-gray-900">Starter Spark - $299/mo</option>
-                          <option value="growth" className="bg-gray-900">Growth Pro - $599/mo</option>
-                          <option value="premier" className="bg-gray-900">Studio Premier - $1499/mo</option>
-                          <option value="rental" className="bg-gray-900">Studio Rental - $150/hr</option>
+                          <option value="starter" className="bg-gray-900">Starter Spark</option>
+                          <option value="growth" className="bg-gray-900">Growth Pro</option>
+                          <option value="premier" className="bg-gray-900">Studio Premier</option>
+                          <option value="rental" className="bg-gray-900">Studio Rental</option>
                           <option value="custom" className="bg-gray-900">Custom Solution</option>
                           <option value="consultation" className="bg-gray-900">Free Consultation</option>
                         </select>

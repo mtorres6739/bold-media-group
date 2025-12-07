@@ -62,64 +62,7 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-black text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Impact in Numbers</h2>
-          </div>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-bold text-yellow-400 mb-2">500+</div>
-              <p className="text-gray-300">Episodes Produced</p>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-yellow-400 mb-2">50+</div>
-              <p className="text-gray-300">Active Podcasts</p>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-yellow-400 mb-2">1M+</div>
-              <p className="text-gray-300">Total Downloads</p>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-yellow-400 mb-2">15+</div>
-              <p className="text-gray-300">Industries Served</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Industries Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-black mb-4">Industries We Serve</h2>
-            <p className="text-xl text-gray-600">
-              We&apos;ve worked with businesses across diverse sectors
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {[
-              'Technology & SaaS',
-              'Healthcare & Wellness',
-              'Finance & Insurance',
-              'Real Estate',
-              'Marketing & Advertising',
-              'Education & Training',
-              'Legal Services',
-              'Consulting',
-              'E-commerce',
-              'Manufacturing',
-              'Hospitality',
-              'Non-Profit'
-            ].map((industry) => (
-              <div key={industry} className="bg-gray-50 p-6 rounded-lg text-center">
-                <p className="font-semibold text-black">{industry}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gray-50">

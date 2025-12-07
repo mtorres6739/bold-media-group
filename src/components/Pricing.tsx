@@ -26,11 +26,13 @@ export default function Pricing() {
     { name: 'Raw Video Delivered', starter: true, growth: false, premier: false },
     { name: 'Edited Video Production', starter: false, growth: true, premier: true },
     { name: 'Enhanced Audio Mastering', starter: false, growth: true, premier: true },
-    { name: 'Social Media Shorts', starter: '—', growth: '5', premier: '15' },
+    { name: 'Social Media Shorts', starter: '5', growth: '10', premier: '15' },
+    { name: '2-3 Minute Clips', starter: '—', growth: '—', premier: '5' },
     { name: 'Distribution to Major Platforms', starter: false, growth: true, premier: true },
     { name: 'SEO-Optimized Show Notes', starter: false, growth: true, premier: true },
-    { name: 'Custom Intro & Outro', starter: false, growth: true, premier: true },
-    { name: 'Custom Video Intro & Outro', starter: false, growth: false, premier: true },
+    { name: 'Standard Intro & Outro (Audio)', starter: false, growth: true, premier: false },
+    { name: 'Custom Intro & Outro (Audio)', starter: false, growth: false, premier: true },
+    { name: 'Custom Intro & Outro (Video)', starter: false, growth: false, premier: true },
     { name: 'Company Logo in Video', starter: false, growth: false, premier: true },
     { name: 'Names in Lower Thirds', starter: false, growth: false, premier: true },
     { name: 'Custom Studio Sign', starter: false, growth: false, premier: true },
@@ -98,7 +100,7 @@ export default function Pricing() {
 
   const studioRental = {
     name: 'Studio Rental',
-    price: '$150',
+    price: 'Call for Pricing',
     description: 'Professional studio space with full equipment access',
     features: [
       'Professional studio space',
@@ -218,6 +220,11 @@ export default function Pricing() {
           ))}
         </div>
 
+        {/* Runtime Note */}
+        <p className="text-center text-sm text-zinc-500 mb-12">
+          * All packages include episodes up to 40-50 minutes in length
+        </p>
+
         {/* Studio Rental Option */}
         <div
           className="max-w-2xl mx-auto animate-fadeInUp"
@@ -249,9 +256,9 @@ export default function Pricing() {
                   <span className="text-3xl font-bold text-white">{studioRental.price}</span>
                   <span className="text-zinc-500 text-sm">/hour</span>
                 </div>
-                <button className="px-6 py-3 bg-white/5 text-white border border-white/10 rounded-lg font-semibold text-sm hover:bg-white/10 hover:border-[#d4af37]/30 transition-all duration-300">
+                <a href="/contact" className="px-6 py-3 bg-white/5 text-white border border-white/10 rounded-lg font-semibold text-sm hover:bg-white/10 hover:border-[#d4af37]/30 transition-all duration-300">
                   {studioRental.cta}
-                </button>
+                </a>
               </div>
             </div>
           </div>
