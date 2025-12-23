@@ -79,10 +79,8 @@ const nextConfig: NextConfig = {
 };
 
 const withMDX = createMDX({
-  options: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
-  },
+  remarkPlugins: [remarkGfm],
+  rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
 });
 
 export default withMDX(nextConfig);
