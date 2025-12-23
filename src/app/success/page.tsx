@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function SuccessPage() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center px-6">
@@ -34,7 +36,7 @@ export default function SuccessPage() {
           </ul>
         </div>
 
-        <a
+        <Link
           href="/"
           className="inline-flex items-center gap-2 px-6 py-3 bg-[#d4af37] text-black font-semibold rounded-lg hover:bg-[#e5c04b] transition-colors"
         >
@@ -42,7 +44,7 @@ export default function SuccessPage() {
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
-        </a>
+        </Link>
       </div>
     </div>
   );
