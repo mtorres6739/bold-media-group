@@ -195,7 +195,7 @@ export function generateOrganizationSchema() {
           description: 'Professional podcast studio rental with equipment.',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '100',
+            price: '99',
             priceCurrency: 'USD',
             unitText: 'HOUR',
           },

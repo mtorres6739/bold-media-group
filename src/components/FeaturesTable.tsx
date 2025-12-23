@@ -11,67 +11,46 @@ export default function FeaturesTable() {
 
   const features = [
     {
-      category: 'Core Production',
+      category: 'Production',
       items: [
         { name: 'Episodes Per Month', starter: '1', growth: '1', premier: '1' },
         { name: 'Professional Studio Recording', starter: true, growth: true, premier: true },
-        { name: 'Raw Audio Delivered', starter: true, growth: false, premier: false },
-        { name: 'Raw Video Delivered', starter: true, growth: false, premier: false },
-        { name: 'Edited Video Production', starter: false, growth: true, premier: true },
+        { name: 'Raw Audio & Video Delivered', starter: true, growth: false, premier: false },
+        { name: 'Professional Audio & Video Editing', starter: false, growth: true, premier: true },
         { name: 'Enhanced Audio Mastering', starter: false, growth: true, premier: true },
-        { name: 'Noise Reduction & Audio Enhancement', starter: false, growth: true, premier: true },
-        { name: 'Removal of Filler Words (ums, ahs)', starter: false, growth: true, premier: true },
-        { name: 'Advanced Video Editing & Color Grading', starter: false, growth: true, premier: true },
-        { name: 'Custom Intro & Outro', starter: false, growth: true, premier: true },
+        { name: 'Show Notes & Transcripts', starter: false, growth: true, premier: true },
+        { name: 'Chapter Indicators', starter: false, growth: true, premier: true },
+        { name: 'Standard Audio Intro & Outro', starter: false, growth: true, premier: false },
+        { name: 'Custom Audio Intro & Outro', starter: false, growth: false, premier: true },
         { name: 'Custom Video Intro & Outro', starter: false, growth: false, premier: true },
-        { name: 'Company Logo in Bottom Corner', starter: false, growth: false, premier: true },
-        { name: 'Names in Lower Thirds on Screen', starter: false, growth: false, premier: true },
-        { name: 'Custom Sign Logo in Studio Background', starter: false, growth: false, premier: true },
-        { name: 'Custom Cover Art for Show & Episode', starter: false, growth: false, premier: true }
+        { name: 'Podcast Launch Strategy Session', starter: false, growth: false, premier: true },
       ]
     },
     {
       category: 'Content & Distribution',
       items: [
         { name: 'Distribution to Major Platforms', starter: false, growth: true, premier: true },
-        { name: 'Transcript generation', starter: false, growth: true, premier: true },
-        { name: 'SEO-Optimized Show Notes', starter: false, growth: true, premier: true },
-        { name: 'Blog post per episode', starter: false, growth: false, premier: true },
-        { name: 'ID3 Tagging & Metadata', starter: false, growth: true, premier: true }
+        { name: 'YouTube Video Upload', starter: false, growth: false, premier: true },
+        { name: 'Custom Graphics (YouTube & Cover Art)', starter: false, growth: false, premier: true },
+        { name: 'Podcast Specific Website', starter: false, growth: false, premier: true },
+        { name: 'Blog Post Per Episode', starter: false, growth: false, premier: true },
+        { name: 'Social Media Content Captions', starter: false, growth: false, premier: true },
+        { name: 'Social Channel Creation', starter: false, growth: false, premier: true },
       ]
     },
     {
-      category: 'Advanced Marketing & Branding',
+      category: 'Clips & Shorts',
       items: [
-        { name: 'Social accounts created (YouTube, LinkedIn, Facebook, Instagram, TikTok)', starter: false, growth: false, premier: true },
-        { name: 'Custom website for show with audio/video loaded', starter: false, growth: false, premier: true },
-        { name: 'Social clips scheduled & auto-posted to all platforms', starter: false, growth: false, premier: true },
-        { name: '18"x12" acrylic sign for show set', starter: false, growth: false, premier: true },
-        { name: 'Custom mic boxes with logo', starter: false, growth: false, premier: true }
+        { name: 'Short Clips (60 sec)', starter: '5', growth: '10', premier: '15' },
+        { name: 'Long Clips (2-3 min)', starter: '—', growth: '—', premier: '5' },
       ]
     },
     {
-      category: 'Marketing Assets',
+      category: 'Support',
       items: [
-        { name: 'Social Media Shorts', starter: false, growth: '5', premier: '15' },
-        { name: 'Social Media Clips', starter: false, growth: '5', premier: '15' },
-        { name: 'Logo Integration in Video', starter: false, growth: true, premier: true },
-        { name: 'Custom Thumbnails (YouTube & Spotify)', starter: false, growth: false, premier: true },
-        { name: 'Standard Podcast Website', starter: false, growth: true, premier: false },
-        { name: 'Custom Podcast Website', starter: false, growth: false, premier: true },
-        { name: 'Custom Branding', starter: false, growth: false, premier: true }
-      ]
-    },
-    {
-      category: 'Support & Workflow',
-      items: [
-        { name: 'Dedicated producer', starter: true, growth: true, premier: true },
-        { name: 'Basic File Organization', starter: true, growth: true, premier: true },
-        { name: 'Support', starter: false, growth: true, premier: false },
+        { name: 'Dedicated Producer', starter: true, growth: true, premier: true },
         { name: 'Priority Support', starter: false, growth: false, premier: true },
-        { name: 'Quarterly Strategy & Design Consult', starter: false, growth: false, premier: true },
         { name: 'White-Glove Service', starter: false, growth: false, premier: true },
-        { name: 'Secure Cloud File Storage', starter: true, growth: true, premier: true }
       ]
     }
   ];
@@ -137,13 +116,13 @@ export default function FeaturesTable() {
                   <th className="text-center py-6 px-4 w-1/5">
                     <div className="flex flex-col items-center">
                       <span className="text-white font-semibold">Starter Spark</span>
-                      <span className="text-xs text-zinc-500 mt-1">Call for Pricing</span>
+                      <span className="text-xs text-zinc-500 mt-1">$399</span>
                     </div>
                   </th>
                   <th className="text-center py-6 px-4 bg-[#d4af37]/5 border-x border-[#d4af37]/10 w-1/5">
                     <div className="flex flex-col items-center">
                       <span className="text-white font-semibold">Growth Pro</span>
-                      <span className="text-xs text-zinc-500 mt-1">Call for Pricing</span>
+                      <span className="text-xs text-zinc-500 mt-1">$699</span>
                       <span className="inline-flex items-center gap-1 text-[10px] bg-gradient-to-r from-[#d4af37] to-[#b8960c] text-black px-2.5 py-1 rounded-full mt-2 font-semibold">
                         <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -155,7 +134,7 @@ export default function FeaturesTable() {
                   <th className="text-center py-6 px-4 w-1/5">
                     <div className="flex flex-col items-center">
                       <span className="text-white font-semibold">Studio Premier</span>
-                      <span className="text-xs text-zinc-500 mt-1">Call for Pricing</span>
+                      <span className="text-xs text-zinc-500 mt-1">$1599</span>
                     </div>
                   </th>
                 </tr>
