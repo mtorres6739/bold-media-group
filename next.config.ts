@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import path from "path";
 import createMDX from '@next/mdx';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
@@ -15,7 +14,6 @@ const nextConfig: NextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   compress: true,
-  outputFileTracingRoot: path.join(__dirname, ".."),
   async headers() {
     return [
       {
