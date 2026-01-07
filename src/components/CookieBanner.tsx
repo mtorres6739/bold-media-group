@@ -1,9 +1,10 @@
 'use client';
+// Accessibility update: aside element with landmark role - v2
 
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
-export default function CookieBanner() {
+export default function CookieBanner(): React.JSX.Element | null {
   const [isVisible, setIsVisible] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   const [isClient, setIsClient] = useState(false);
@@ -45,7 +46,11 @@ export default function CookieBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-6 z-50 border-t border-gray-700">
+    <aside
+      role="region"
+      aria-label="Cookie consent"
+      className="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-6 z-50 border-t border-gray-700"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
           <div className="mb-4 md:mb-0 md:mr-8">
@@ -98,8 +103,10 @@ export default function CookieBanner() {
             )}
             
             <div className="flex items-center space-x-4 text-sm">
-              <button 
+              <button
+                type="button"
                 onClick={() => setShowDetails(!showDetails)}
+                aria-expanded={showDetails}
                 className="text-yellow-400 hover:text-yellow-300 transition-colors"
               >
                 {showDetails ? 'Hide Details' : 'Cookie Settings'}
@@ -112,12 +119,14 @@ export default function CookieBanner() {
           
           <div className="flex flex-col sm:flex-row gap-3">
             <button
+              type="button"
               onClick={acceptEssential}
               className="px-6 py-2 bg-gray-700 text-white font-medium rounded-lg hover:bg-gray-600 transition-colors"
             >
               Essential Only
             </button>
             <button
+              type="button"
               onClick={acceptAll}
               className="px-6 py-2 bg-yellow-400 text-black font-medium rounded-lg hover:bg-yellow-300 transition-colors"
             >
@@ -126,6 +135,6 @@ export default function CookieBanner() {
           </div>
         </div>
       </div>
-    </div>
+    </aside>
   );
 }

@@ -123,7 +123,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           <div className="relative max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
             {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-sm text-zinc-500 mb-8" aria-label="Breadcrumb">
+            <nav className="flex items-center gap-2 text-sm text-zinc-400 mb-8" aria-label="Breadcrumb">
               <Link href="/" className="hover:text-[#d4af37] transition-colors">Home</Link>
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -141,15 +141,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#d4af37]/20 text-[#d4af37] text-sm font-medium">
                   {post.category}
                 </span>
-                <time dateTime={post.date} className="text-zinc-500 text-sm">
+                <time dateTime={post.date} className="text-zinc-400 text-sm">
                   {new Date(post.date).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric'
                   })}
                 </time>
-                <span className="text-zinc-600">•</span>
-                <span className="text-zinc-500 text-sm">{post.readTime}</span>
+                <span className="text-zinc-400">•</span>
+                <span className="text-zinc-400 text-sm">{post.readTime}</span>
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium text-white mb-6 leading-tight">
@@ -160,7 +160,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.description}
               </p>
 
-              <div className="flex items-center gap-3 text-sm text-zinc-500">
+              <div className="flex items-center gap-3 text-sm text-zinc-400">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4af37]/30 to-[#d4af37]/10 flex items-center justify-center">
                   <svg className="w-5 h-5 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
@@ -205,7 +205,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     Contact Us
                   </Link>
                 </div>
-                <p className="mt-6 text-sm text-zinc-500">
+                <p className="mt-6 text-sm text-zinc-400">
                   {siteConfig.location.address}, {siteConfig.location.city}, {siteConfig.location.state} {siteConfig.location.zip} | {siteConfig.location.phone}
                 </p>
               </div>
@@ -214,7 +214,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {/* Tags */}
             {post.tags && post.tags.length > 0 && (
               <div className="mt-12 pt-8 border-t border-zinc-800">
-                <h3 className="text-sm font-medium text-zinc-500 mb-4">Tags</h3>
+                <h3 className="text-sm font-medium text-zinc-400 mb-4">Tags</h3>
                 <div className="flex flex-wrap gap-2">
                   {post.tags.map((tag) => (
                     <span
@@ -230,7 +230,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
             {/* Share */}
             <div className="mt-8 pt-8 border-t border-zinc-800">
-              <p className="text-zinc-500 text-sm mb-4">Share this article</p>
+              <p className="text-zinc-400 text-sm mb-4">Share this article</p>
               <div className="flex gap-3">
                 <a
                   href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`${siteConfig.url}/blog/${post.slug}`)}`}
@@ -296,7 +296,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       {relatedPost.description}
                     </p>
                     <div className="flex items-center justify-between">
-                      <span className="text-zinc-500 text-sm">{relatedPost.readTime}</span>
+                      <span className="text-zinc-400 text-sm">{relatedPost.readTime}</span>
                       <span className="text-[#d4af37] text-sm font-medium group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
                         Read
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

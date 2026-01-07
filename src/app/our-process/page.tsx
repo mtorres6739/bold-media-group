@@ -183,7 +183,7 @@ export default function OurProcessPage() {
               className={`flex flex-col items-center gap-2 ${mounted ? 'animate-fadeIn' : 'opacity-0'}`}
               style={{ animationDelay: '0.8s' }}
             >
-              <span className="text-xs text-zinc-500 uppercase tracking-widest">Explore</span>
+              <span className="text-xs text-zinc-400 uppercase tracking-widest">Explore</span>
               <div className="w-[1px] h-12 bg-gradient-to-b from-zinc-500 to-transparent animate-pulse" />
             </div>
           </div>
@@ -292,7 +292,7 @@ export default function OurProcessPage() {
           {/* Step Progress Bar */}
           <div className="mt-16">
             <div className="flex items-center justify-between mb-4">
-              <span className="text-sm text-zinc-500">Progress</span>
+              <span className="text-sm text-zinc-400">Progress</span>
               <span className="text-sm text-[#d4af37]">{activeStep + 1} of {processSteps.length}</span>
             </div>
             <div className="h-1 bg-white/5 rounded-full overflow-hidden">

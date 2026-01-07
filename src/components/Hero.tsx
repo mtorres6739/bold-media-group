@@ -102,7 +102,7 @@ export default function Hero() {
 
           {/* Description */}
           <p
-            className={`text-lg sm:text-xl text-zinc-500 mb-12 max-w-2xl mx-auto leading-relaxed ${mounted ? 'animate-fadeInUp' : ''}`}
+            className={`text-lg sm:text-xl text-zinc-400 mb-12 max-w-2xl mx-auto leading-relaxed ${mounted ? 'animate-fadeInUp' : ''}`}
             style={{ animationDelay: '0.4s' }}
           >
             Professional podcast production that transforms your ideas into captivating content.
@@ -143,7 +143,7 @@ export default function Hero() {
               </div>
             </div>
             <div className={isSubmitted ? 'hidden' : 'block'}>
-              <p className="text-zinc-500 text-sm mb-4 tracking-wide uppercase">
+              <p className="text-zinc-400 text-sm mb-4 tracking-wide uppercase">
                 Schedule a complimentary consultation
               </p>
               <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">

@@ -81,7 +81,9 @@ export default function Header() {
               type="button"
               onClick={() => setMobileMenuOpen((prev) => !prev)}
               className="p-2 text-zinc-400 hover:text-white transition-colors duration-300"
-              aria-label="Toggle navigation"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               <div className="w-6 h-5 relative flex flex-col justify-between">
                 <span
@@ -106,6 +108,9 @@ export default function Header() {
 
         {/* Mobile menu */}
         <div
+          id="mobile-navigation"
+          role="navigation"
+          aria-label="Mobile navigation"
           className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
             mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}

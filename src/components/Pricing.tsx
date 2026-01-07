@@ -115,7 +115,7 @@ export default function Pricing() {
   const renderFeatureValue = (value: boolean | string, highlighted: boolean = false) => {
     if (typeof value === 'string') {
       if (value === '—') {
-        return <span className="text-zinc-600 text-sm">—</span>;
+        return <span className="text-zinc-400 text-sm">—</span>;
       }
       return <span className={`text-sm font-medium ${highlighted ? 'text-[#d4af37]' : 'text-white'}`}>{value}</span>;
     }
@@ -130,7 +130,7 @@ export default function Pricing() {
     }
     return (
       <div className="w-5 h-5 rounded-full bg-white/5 flex items-center justify-center">
-        <svg className="w-2.5 h-2.5 text-zinc-600" fill="currentColor" viewBox="0 0 20 20">
+        <svg className="w-2.5 h-2.5 text-zinc-400" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
         </svg>
       </div>
@@ -248,7 +248,7 @@ export default function Pricing() {
                       {tier.price}
                     </span>
                   </div>
-                  <p className="text-sm text-zinc-500">{tier.description}</p>
+                  <p className="text-sm text-zinc-400">{tier.description}</p>
                 </div>
 
                 {/* Divider */}
@@ -292,7 +292,7 @@ export default function Pricing() {
                       <div>
                         <span className="text-sm text-white font-medium">Add Strategy Session</span>
                         <span className="text-xs text-[#d4af37] ml-2">+$500</span>
-                        <p className="text-xs text-zinc-500 mt-1">Includes concept art, content plan & printed guide</p>
+                        <p className="text-xs text-zinc-400 mt-1">Includes concept art, content plan & printed guide</p>
                       </div>
                     </label>
                   </div>
@@ -315,7 +315,7 @@ export default function Pricing() {
         </div>
 
         {/* Runtime Note */}
-        <p className="text-center text-sm text-zinc-500 mb-12">
+        <p className="text-center text-sm text-zinc-400 mb-12">
           * All packages include episodes up to 40-50 minutes in length
         </p>
 
@@ -333,7 +333,7 @@ export default function Pricing() {
                     Hourly
                   </span>
                 </div>
-                <p className="text-sm text-zinc-500 mb-6">{studioRental.description}</p>
+                <p className="text-sm text-zinc-400 mb-6">{studioRental.description}</p>
                 <div className="grid grid-cols-1 gap-2 mb-8">
                   {studioRental.features.map((feature, index) => (
                     <span key={index} className="inline-flex items-center gap-2 text-xs text-zinc-400">
@@ -348,7 +348,7 @@ export default function Pricing() {
               <div className="flex items-center justify-between pt-6 border-t border-white/5">
                 <div>
                   <span className="text-2xl font-bold text-white">{studioRental.price}</span>
-                  <span className="text-zinc-500 text-xs">/hour</span>
+                  <span className="text-zinc-400 text-xs">/hour</span>
                 </div>
                 <button
                   onClick={() => handleCheckout(PRICE_IDS.studioRental, 'payment')}
@@ -374,7 +374,7 @@ export default function Pricing() {
                     One-Time
                   </span>
                 </div>
-                <p className="text-sm text-zinc-500 mb-6">{strategySession.description}</p>
+                <p className="text-sm text-zinc-400 mb-6">{strategySession.description}</p>
                 <div className="grid grid-cols-1 gap-2 mb-8">
                   {strategySession.features.map((feature, index) => (
                     <span key={index} className="inline-flex items-center gap-2 text-xs text-zinc-400">
@@ -389,7 +389,7 @@ export default function Pricing() {
               <div className="flex items-center justify-between pt-6 border-t border-white/5">
                 <div>
                   <span className="text-2xl font-bold text-white">{strategySession.price}</span>
-                  <span className="text-zinc-500 text-xs"> once</span>
+                  <span className="text-zinc-400 text-xs"> once</span>
                 </div>
                 <button
                   onClick={() => handleCheckout(PRICE_IDS.strategySession, 'payment')}
@@ -415,7 +415,7 @@ export default function Pricing() {
                     One-Time
                   </span>
                 </div>
-                <p className="text-sm text-zinc-500 mb-6">{guestAppearance.description}</p>
+                <p className="text-sm text-zinc-400 mb-6">{guestAppearance.description}</p>
                 <div className="grid grid-cols-1 gap-2 mb-8">
                   {guestAppearance.features.map((feature, index) => (
                     <span key={index} className="inline-flex items-center gap-2 text-xs text-zinc-400">
@@ -430,7 +430,7 @@ export default function Pricing() {
               <div className="flex items-center justify-between pt-6 border-t border-white/5">
                 <div>
                   <span className="text-2xl font-bold text-white">{guestAppearance.price}</span>
-                  <span className="text-zinc-500 text-xs"> once</span>
+                  <span className="text-zinc-400 text-xs"> once</span>
                 </div>
                 <button
                   onClick={() => handleCheckout(PRICE_IDS.guestAppearance, 'payment')}

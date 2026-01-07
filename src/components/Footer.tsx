@@ -21,7 +21,8 @@ export default function Footer() {
     support: [
       { name: 'Contact Us', href: '/contact' },
       { name: 'Podcast Discovery', href: '/podcast-discovery' },
-      { name: 'FAQ', href: '/faq' }
+      { name: 'FAQ', href: '/faq' },
+      { name: 'Accessibility', href: '/accessibility' }
     ]
   };
 
@@ -76,7 +77,7 @@ export default function Footer() {
             {/* Company Info */}
             <div className="lg:col-span-4">
               <h3 className="font-display text-2xl text-gradient-gold mb-4">Bold Media Group</h3>
-              <p className="text-zinc-500 text-sm leading-relaxed mb-6">
+              <p className="text-zinc-400 text-sm leading-relaxed mb-6">
                 Your Voice. Your Brand. Boldly Amplified. Professional podcast production that transforms your ideas into captivating content.
               </p>
 
@@ -86,7 +87,7 @@ export default function Footer() {
                   <a
                     key={social.name}
                     href={social.href}
-                    className="w-9 h-9 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center text-zinc-500 hover:text-[#d4af37] hover:border-[#d4af37]/30 hover:bg-[#d4af37]/5 transition-all duration-300"
+                    className="w-9 h-9 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center text-zinc-400 hover:text-[#d4af37] hover:border-[#d4af37]/30 hover:bg-[#d4af37]/5 transition-all duration-300"
                     aria-label={social.name}
                   >
                     {social.icon}
@@ -106,7 +107,7 @@ export default function Footer() {
                     <li key={link.name}>
                       <Link
                         href={link.href}
-                        className="text-sm text-zinc-500 hover:text-white transition-colors duration-300 link-underline"
+                        className="text-sm text-zinc-400 hover:text-white transition-colors duration-300 link-underline"
                       >
                         {link.name}
                       </Link>
@@ -121,7 +122,7 @@ export default function Footer() {
               <h4 className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-4">
                 Stay Updated
               </h4>
-              <p className="text-sm text-zinc-500 mb-4">
+              <p className="text-sm text-zinc-400 mb-4">
                 Get podcast tips and industry insights delivered to your inbox.
               </p>
               <div className="flex gap-2">
@@ -130,7 +131,10 @@ export default function Footer() {
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-sm text-white placeholder-zinc-600 focus:border-[#d4af37] focus:bg-white/8 transition-all duration-300"
                 />
-                <button className="px-4 py-2.5 bg-gradient-to-r from-[#d4af37] to-[#b8960c] text-black text-sm font-semibold rounded-lg hover:from-[#f4e4ba] hover:to-[#d4af37] transition-all duration-300">
+                <button
+                  type="button"
+                  className="px-4 py-2.5 bg-gradient-to-r from-[#d4af37] to-[#b8960c] text-black text-sm font-semibold rounded-lg hover:from-[#f4e4ba] hover:to-[#d4af37] transition-all duration-300"
+                >
                   Subscribe
                 </button>
               </div>
@@ -141,18 +145,28 @@ export default function Footer() {
         {/* Bottom Footer */}
         <div className="border-t border-white/5 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-zinc-600 text-xs">
+            <div className="text-zinc-400 text-xs">
               &copy; {currentYear} Bold Media Group LLC. All rights reserved.
             </div>
-            <div className="flex gap-6 text-xs">
-              <Link href="/terms" className="text-zinc-600 hover:text-zinc-400 transition-colors">
+            <div className="flex items-center gap-6 text-xs">
+              <Link href="/terms" className="text-zinc-400 hover:text-white transition-colors">
                 Terms
               </Link>
-              <Link href="/privacy" className="text-zinc-600 hover:text-zinc-400 transition-colors">
+              <Link href="/privacy" className="text-zinc-400 hover:text-white transition-colors">
                 Privacy
               </Link>
-              <Link href="/cookies" className="text-zinc-600 hover:text-zinc-400 transition-colors">
+              <Link href="/cookies" className="text-zinc-400 hover:text-white transition-colors">
                 Cookies
+              </Link>
+              <Link
+                href="/accessibility"
+                className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-[#d4af37] transition-colors"
+                aria-label="Accessibility statement - WCAG 2.1 AA compliant"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                </svg>
+                <span>Accessibility</span>
               </Link>
             </div>
           </div>

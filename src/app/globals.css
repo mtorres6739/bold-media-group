@@ -348,11 +348,27 @@ body {
   background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
 }
 
-/* Focus states */
+/* Focus states - ADA Compliant */
 input:focus, textarea:focus, select:focus {
-  outline: none;
+  outline: 2px solid var(--gold-primary);
+  outline-offset: 2px;
   border-color: var(--gold-primary);
-  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.25);
+}
+
+/* Global focus-visible styles for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--gold-primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.25);
+}
+
+/* Remove outline for mouse users, keep for keyboard */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* Link hover effect */
@@ -373,4 +389,33 @@ input:focus, textarea:focus, select:focus {
 
 .link-underline:hover::after {
   width: 100%;
+}
+
+/* Reduced motion support - ADA Compliance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fadeInUp,
+  .animate-fadeIn,
+  .animate-slideInLeft,
+  .animate-slideInRight,
+  .animate-scaleIn,
+  .animate-float,
+  .animate-pulse-gold,
+  .animate-shimmer {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }

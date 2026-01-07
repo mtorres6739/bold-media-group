@@ -130,20 +130,26 @@ export default function Testimonials() {
             {/* Navigation */}
             <div className="flex justify-between items-center mt-8">
               <button
+                type="button"
                 onClick={prevTestimonial}
+                aria-label="Previous testimonial"
                 className="p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-110"
               >
-                <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
 
               {/* Dots */}
-              <div className="flex space-x-2">
+              <div className="flex space-x-2" role="tablist" aria-label="Testimonial navigation">
                 {testimonials.map((_, index) => (
                   <button
+                    type="button"
                     key={index}
                     onClick={() => setActiveIndex(index)}
+                    role="tab"
+                    aria-selected={index === activeIndex}
+                    aria-label={`View testimonial ${index + 1}`}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
                       index === activeIndex ? 'bg-yellow-400 w-8' : 'bg-gray-300'
                     }`}
@@ -152,10 +158,12 @@ export default function Testimonials() {
               </div>
 
               <button
+                type="button"
                 onClick={nextTestimonial}
+                aria-label="Next testimonial"
                 className="p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-110"
               >
-                <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>

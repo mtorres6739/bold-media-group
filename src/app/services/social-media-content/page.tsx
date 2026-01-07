@@ -245,7 +245,7 @@ export default function SocialMediaContentPage() {
 
             {/* Description */}
             <p
-              className={`text-lg sm:text-xl text-zinc-500 mb-12 max-w-2xl mx-auto leading-relaxed ${mounted ? 'animate-fadeInUp' : ''}`}
+              className={`text-lg sm:text-xl text-zinc-400 mb-12 max-w-2xl mx-auto leading-relaxed ${mounted ? 'animate-fadeInUp' : ''}`}
               style={{ animationDelay: '0.4s' }}
             >
               Transform every podcast episode into a library of scroll-stopping, engagement-driving
@@ -274,7 +274,7 @@ export default function SocialMediaContentPage() {
           style={{ animationDelay: '1s' }}
         >
           <div className="flex flex-col items-center gap-2">
-            <span className="text-xs text-zinc-500 uppercase tracking-widest">Scroll</span>
+            <span className="text-xs text-zinc-400 uppercase tracking-widest">Scroll</span>
             <div className="w-[1px] h-12 bg-gradient-to-b from-zinc-500 to-transparent" />
           </div>
         </div>
@@ -354,7 +354,7 @@ export default function SocialMediaContentPage() {
                       </div>
                       <div>
                         <h4 className="text-white font-medium mb-1">{benefit.title}</h4>
-                        <p className="text-sm text-zinc-500">{benefit.description}</p>
+                        <p className="text-sm text-zinc-400">{benefit.description}</p>
                       </div>
                     </div>
                   </div>
@@ -428,7 +428,7 @@ export default function SocialMediaContentPage() {
           </div>
 
           {/* Trust indicators */}
-          <div className="mt-16 flex flex-wrap items-center justify-center gap-8 text-zinc-500 text-sm">
+          <div className="mt-16 flex flex-wrap items-center justify-center gap-8 text-zinc-400 text-sm">
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-[#d4af37]" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />

@@ -123,7 +123,7 @@ export default function StudioShowcase() {
               <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-[#f4e4ba] transition-colors duration-300">
                 {item.name}
               </h3>
-              <p className="text-sm text-zinc-500 leading-relaxed">{item.description}</p>
+              <p className="text-sm text-zinc-400 leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
@@ -152,7 +152,7 @@ export default function StudioShowcase() {
                 <h3 className="font-display text-2xl sm:text-3xl text-white mb-4">
                   Professional Recording Studio
                 </h3>
-                <p className="text-zinc-500 max-w-lg mx-auto">
+                <p className="text-zinc-400 max-w-lg mx-auto">
                   State-of-the-art facility designed for professional podcast production
                 </p>
 

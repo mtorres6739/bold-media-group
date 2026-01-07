@@ -152,7 +152,7 @@ export default function PodcastDiscoveryForm() {
           <p className="text-xl text-zinc-300 mb-6 leading-relaxed">
             Your podcast discovery questionnaire has been submitted successfully.
           </p>
-          <p className="text-lg text-zinc-500 leading-relaxed max-w-lg mx-auto">
+          <p className="text-lg text-zinc-400 leading-relaxed max-w-lg mx-auto">
             Our team will review your responses and create a customized podcast blueprint for your business. We&apos;ll be in touch within 24-48 hours.
           </p>
         </div>
@@ -179,12 +179,12 @@ export default function PodcastDiscoveryForm() {
               <h1 className="font-display text-2xl sm:text-3xl font-medium text-gradient-gold">
                 Podcast Discovery
               </h1>
-              <p className="text-sm text-zinc-500 mt-1">Tell us about your vision</p>
+              <p className="text-sm text-zinc-400 mt-1">Tell us about your vision</p>
             </div>
             {mounted && (
               <div className="text-right">
                 <span className="text-3xl font-light text-[#d4af37]">{currentSection + 1}</span>
-                <span className="text-lg text-zinc-600"> / {sections.length}</span>
+                <span className="text-lg text-zinc-400"> / {sections.length}</span>
               </div>
             )}
           </div>
@@ -405,7 +405,7 @@ export default function PodcastDiscoveryForm() {
                       <div className={`text-lg font-medium ${formData.episodeLength === option.value ? 'text-[#d4af37]' : 'text-white'}`}>
                         {option.label}
                       </div>
-                      <div className="text-sm text-zinc-500">{option.desc}</div>
+                      <div className="text-sm text-zinc-400">{option.desc}</div>
                     </button>
                   ))}
                 </div>
@@ -436,7 +436,7 @@ export default function PodcastDiscoveryForm() {
                       <div className={`text-lg font-medium ${formData.frequency === option.value ? 'text-[#d4af37]' : 'text-white'}`}>
                         {option.label}
                       </div>
-                      <div className="text-sm text-zinc-500">{option.desc}</div>
+                      <div className="text-sm text-zinc-400">{option.desc}</div>
                     </button>
                   ))}
                 </div>
@@ -634,7 +634,7 @@ export default function PodcastDiscoveryForm() {
             </div>
 
             {/* Privacy note */}
-            <div className="text-center text-sm text-zinc-500">
+            <div className="text-center text-sm text-zinc-400">
               <p>By submitting this form, you agree to our privacy policy. Your information will only be used to contact you about your podcast project.</p>
             </div>
           </div>
@@ -648,7 +648,7 @@ export default function PodcastDiscoveryForm() {
             disabled={currentSection === 0}
             className={`group flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
               currentSection === 0
-                ? 'bg-white/5 text-zinc-600 cursor-not-allowed'
+                ? 'bg-white/5 text-zinc-400 cursor-not-allowed'
                 : 'bg-white/5 text-white border border-white/10 hover:border-white/20 hover:bg-white/8'
             }`}
           >

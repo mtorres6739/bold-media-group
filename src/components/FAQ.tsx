@@ -80,18 +80,23 @@ export default function FAQ() {
             >
               {/* Question */}
               <button
+                type="button"
+                id={`faq-button-${index}`}
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-300 focus:outline-none"
+                aria-expanded={openIndex === index}
+                aria-controls={`faq-panel-${index}`}
+                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-300 focus:ring-2 focus:ring-[#d4af37]/50 focus:outline-none"
               >
                 <span className="text-base font-medium text-white pr-8">{faq.question}</span>
                 <div className={`flex-shrink-0 w-8 h-8 rounded-full bg-white/5 flex items-center justify-center transition-all duration-300 ${openIndex === index ? 'bg-[#d4af37]/20' : ''}`}>
                   <svg
                     className={`w-4 h-4 transition-all duration-300 ${
-                      openIndex === index ? 'text-[#d4af37] rotate-180' : 'text-zinc-500'
+                      openIndex === index ? 'text-[#d4af37] rotate-180' : 'text-zinc-400'
                     }`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
+                    aria-hidden="true"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
@@ -100,6 +105,9 @@ export default function FAQ() {
 
               {/* Answer */}
               <div
+                id={`faq-panel-${index}`}
+                role="region"
+                aria-labelledby={`faq-button-${index}`}
                 className={`overflow-hidden transition-all duration-500 ease-in-out ${
                   openIndex === index ? 'max-h-96' : 'max-h-0'
                 }`}
@@ -127,7 +135,7 @@ export default function FAQ() {
 
             <div className="relative m-px bg-[#111] rounded-2xl p-10 text-center">
               <h3 className="font-display text-2xl text-white mb-3">Still have questions?</h3>
-              <p className="text-zinc-500 mb-8 max-w-lg mx-auto">
+              <p className="text-zinc-400 mb-8 max-w-lg mx-auto">
                 Our team is here to help. Schedule a free consultation to discuss your podcast needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
